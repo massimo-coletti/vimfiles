@@ -1,0 +1,9 @@
+"Configuration of VsVim extension for Visual Studio
+
+set scrolloff=2
+set hlsearch
+set incsearch
+
+" In visual mode // will search for the highlighted
+" string, starting from the current occurrence.
+vnoremap // yk/<C-R>"<CR>

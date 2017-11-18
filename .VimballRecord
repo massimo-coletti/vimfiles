@@ -1,0 +1,1 @@
+mark-2.8.5.vmb: call delete('C:\Users\MCOLETTI\vimfiles/autoload/mark.vim')|call delete('C:\Users\MCOLETTI\vimfiles/autoload/mark/palettes.vim')|call delete('C:\Users\MCOLETTI\vimfiles/plugin/mark.vim')|call delete('C:\Users\MCOLETTI\vimfiles/doc/mark.txt')
