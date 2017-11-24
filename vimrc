@@ -17,8 +17,10 @@ runtime macros/matchit.vim
 set number
 
 "Incremental search + search highlight
-set incsearch
-set hlsearch
+set incsearch hlsearch
+
+"Case insensitive search unless using at least one uppercase char
+set ignorecase smartcase
 
 "Minimal number of screen lines to keep above and below the cursor
 set scrolloff=2
