@@ -31,10 +31,6 @@ let s:colors = {
       \ "vertsplit": get(s:overrides, "vertsplit", { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }),
       \}
 
-function! palenight#GetColors()
-  return s:colors
-endfunction
-
 highlight clear
 
 if exists("syntax_on")
@@ -54,22 +50,9 @@ if !exists("g:palenight_termcolors")
   let g:palenight_termcolors = 256
 endif
 
-" Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:palenight_terminal_italics")
-  let g:palenight_terminal_italics = 0
-endif
-
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
-  if g:palenight_terminal_italics == 0
-    if has_key(a:style, "cterm") && a:style["cterm"] == "italic"
-      unlet a:style.cterm
-    endif
-    if has_key(a:style, "gui") && a:style["gui"] == "italic"
-      unlet a:style.gui
-    endif
-  endif
   if g:palenight_termcolors == 16
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")
@@ -87,19 +70,9 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
-" public {{{
-
-function! palenight#set_highlight(group, style)
-  call s:h(a:group, a:style)
-endfunction
-
-" }}}
-
 " }}}
 
 " Color Variables {{{
-
-let s:colors = palenight#GetColors()
 
 let s:red = s:colors.red
 let s:light_red = s:colors.light_red
