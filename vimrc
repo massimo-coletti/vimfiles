@@ -105,6 +105,9 @@ function! CR_hisearch()
   return ":silent set hlsearch\<CR>"
 endfunction
 nnoremap <silent> <expr> <CR> CR_hisearch()
+"In the quickfix window, Enter is used to position buffers to
+"the location under the cursor, so undefine the mapping there.
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 "--------------------------------------------------
 "Select whole line (excluding newline) and copy to clipboard;
