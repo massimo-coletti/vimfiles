@@ -1,5 +1,3 @@
-" Vim config modification: 16 Oct 2016 22:00
-"-------------------------------------------
 "  List of my plugins:
 "  *) mark.vim (by Ingo Karkat): Highlight several words in
 "     different colors simultaneously.
@@ -110,10 +108,10 @@ nnoremap <silent> <expr> <CR> CR_hisearch()
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 "--------------------------------------------------
-"Select whole line (excluding newline) and copy to clipboard;
-"then reselect the line from end to start, because seeing the
-"selection is visually more satisfying.
-nnoremap vv 0vg_"+yg_v0
+"Select whole line (except leading/trailing whitespace and newline)
+"and copy to clipboard. Then, for visual feedback, reselect the line
+"and position the cursor on first non-whitespace character.
+nnoremap vv ^vg_"+yg_v^
 
 "Use Control+TAB to cycle between tabs
 nnoremap <C-tab> :tabnext<CR>
