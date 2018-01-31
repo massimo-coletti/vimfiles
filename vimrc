@@ -34,6 +34,9 @@ set statusline+=\ %P   "Percentage
 "Report all changes
 set report=0
 
+"Enhance command-line completion: shows matches above cmdline
+set wildmenu
+
 "Set font
 if has('gui_running')
    "set guifont=Courier_New:h11:cANSI
