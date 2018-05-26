@@ -20,16 +20,22 @@ set incsearch hlsearch
 "Case insensitive search unless using at least one uppercase char
 set ignorecase smartcase
 
+"In visual mode // will search for the highlighted string, starting
+"from the current occurrence: k goes up one line before searching.
+"/V (very-no-magic) avoids regex metachars in the search patterns.
+vnoremap // yk/\V<C-R>"<CR>
+
 "Minimal number of screen lines to keep above and below the cursor
 set scrolloff=2
 
 "Set status line
 set laststatus=2
-set statusline=%f\ %h  "File name, Blank, Help buffer flag
-set statusline+=%m%r   "Modified flag ([+]/[-]), Read-only flag
-set statusline+=%=     "Switch to right
+set statusline=b%03n\   "Buffer number + blank
+set statusline+=%F\ %h  "File name, blank, Help buffer flag
+set statusline+=%m%r    "Modified flag ([+]/[-]), Read-only flag
+set statusline+=%=      "Switch to right
 set statusline+=%-28.(ln:%l/%L\ col:%c%V%) "Line/total, col, virtual col
-set statusline+=\ %P   "Percentage
+set statusline+=\ %P    "Percentage
 
 "Report all changes
 set report=0
