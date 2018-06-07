@@ -30,12 +30,13 @@ set scrolloff=2
 
 "Set status line
 set laststatus=2
-set statusline=b%03n\   "Buffer number + blank
-set statusline+=%F\ %h  "File name, blank, Help buffer flag
-set statusline+=%m%r    "Modified flag ([+]/[-]), Read-only flag
-set statusline+=%=      "Switch to right
+set statusline=b%03n\     "Buffer number + blank
+set statusline+=%F\ %h    "File name, blank, Help buffer flag
+set statusline+=[%{&ff}]  "File format (unix or dos)
+set statusline+=%m%r      "Modified flag ([+]/[-]), Read-only flag
+set statusline+=%=        "Switch to right
 set statusline+=%-28.(ln:%l/%L\ col:%c%V%) "Line/total, col, virtual col
-set statusline+=\ %P    "Percentage
+set statusline+=\ %P      "Percentage
 
 "Report all changes
 set report=0
