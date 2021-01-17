@@ -66,8 +66,8 @@ set linebreak
 set breakindent
 
 "Set color scheme
-color mnhlight01
-"color mnhdark01
+"color mnhlight01
+color mnhdark02
 
 "Highlight trailing whitespace with error color
 match ErrorMsg '\s\+$'
