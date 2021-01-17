@@ -1,10 +1,12 @@
-"  List of my plugins:
+"  List of used plugins:
 "  *) mark.vim (by Ingo Karkat): Highlight several words in
 "     different colors simultaneously.
 "  *) vim-signature: Place bookmarks in gutter.
 "  *) HiCursorWords: Highlights words under the cursor.
 "     (packadd hicursorwords)
 "  *) vim-colorstepper (packadd colorstepper)
+"  *) vim-ps1: Syntax coloring & formatting for Powershell
+"     https://github.com/PProvost/vim-ps1
 
 set nocompatible
 syntax on
@@ -49,6 +51,7 @@ if has('gui_running')
    "set guifont=Courier_New:h11:cANSI
    "set guifont=Lucida_Sans_Typewriter_Regular:h11:cANSI
    set guifont=Consolas:h12:cANSI
+   set guioptions-=T "remove toolbar
 endif
 
 "Setup tabs and indentation
