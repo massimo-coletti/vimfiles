@@ -56,7 +56,8 @@ highlight SpecialKey guifg=#9acd32
 highlight Title guifg=LemonChiffon gui=bold
 highlight Visual guifg=black guibg=MistyRose gui=none
 highlight WarningMsg guifg=LightGoldenRod1 gui=bold
-highlight MatchParen guibg=Blue2 guifg=NONE gui=bold
+"highlight MatchParen guibg=Blue2 guifg=NONE gui=bold
+hi MatchParen guifg=yellow guibg=black gui=underline,bold
 
 highlight DiffAdd guifg=#d7ffaf guibg=#5f875f
 highlight DiffChange guifg=#d7d7ff guibg=#5f5f87

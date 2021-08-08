@@ -18,4 +18,5 @@ highlight Statement gui=none
 highlight Type guifg=#b2ffff gui=none
 highlight PreProc guifg=DarkTurquoise gui=none
 highlight String guifg=PeachPuff gui=italic
-highlight MatchParen guifg=Black guibg=PaleGreen3 gui=bold
+"highlight MatchParen guifg=Black guibg=PaleGreen3 gui=bold
+hi MatchParen guifg=yellow guibg=black gui=underline,bold
