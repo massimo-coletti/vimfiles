@@ -128,3 +128,8 @@ nnoremap vv ^vg_"+yg_v^
 
 "Use Control+TAB to cycle between tabs
 nnoremap <C-tab> :tabnext<CR>
+
+"--------------------------------------------------
+" Enhanced python syntax: https://github.com/vim-python/python-syntax
+" Installed in ~\vimfiles\pack\xplugins\start\python-syntax
+let g:python_highlight_all = 1
