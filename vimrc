@@ -1,12 +1,23 @@
 "  List of used plugins:
-"  *) mark.vim (by Ingo Karkat): Highlight several words in
-"     different colors simultaneously.
+"  *) mark.vim (by Ingo Karkat): Highlight words in different colors simultaneously.
+"     Dependency: vim-ingo-library
+"     https://github.com/inkarkat/vim-mark + https://github.com/inkarkat/vim-ingo-library
+"     Updated on: October 3 2021
+"
 "  *) vim-signature: Place bookmarks in gutter.
-"  *) HiCursorWords: Highlights words under the cursor.
-"     (packadd hicursorwords)
-"  *) vim-colorstepper (packadd colorstepper)
-"  *) vim-ps1: Syntax coloring & formatting for Powershell
+"
+"  *) vim-ps1: Syntax coloring & formatting for Powershell:
 "     https://github.com/PProvost/vim-ps1
+"     Updated on: September 15 2021
+"
+"  *) Enhanced python syntax:
+"     https://github.com/vim-python/python-syntax
+"     Updated on: September 15 2021
+"
+"  *) HiCursorWords: Highlights words under the cursor.
+"     Optional: Enable with packadd hicursorwords
+"  *) vim-colorstepper
+"     Optional: Enable with packadd colorstepper
 
 set nocompatible
 syntax on
