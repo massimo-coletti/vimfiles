@@ -5,6 +5,12 @@
 "     Updated on: October 3 2021
 "
 "  *) vim-signature: Place bookmarks in gutter.
+"     https://github.com/kshenoy/vim-signature
+"     Updated on: November 16, 2021
+"
+"  *) vim-surround: Surround text with parentheses, brackets, quotes, XML tags and more
+"     https://github.com/tpope/vim-surround
+"     Updated on: November 16, 2021
 "
 "  *) vim-ps1: Syntax coloring & formatting for Powershell:
 "     https://github.com/PProvost/vim-ps1
@@ -112,6 +118,15 @@ function! Mnh_showSyntaxGroup()
     return l:synname1 . ' --> ' . l:synname2
 endfunction
 map <F10> :echo Mnh_showSyntaxGroup()<CR>
+
+"Set 2 char indentaion for yaml
+autocmd FileType yml,yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+"Surround with double curly braces, for Jinja2 variables.
+"No spaces: Lowercase j + surround operator, e.g yswj
+"With spaces: Uppercase J + surround operator, e.g yswJ
+let g:surround_106 = "{{\r}}"
+let g:surround_74 = "{{ \r }}"
 
 "--------------------------------------------------
 "Hitting Enter in Normal mode highlights the word under
