@@ -122,6 +122,9 @@ map <F10> :echo Mnh_showSyntaxGroup()<CR>
 "Set 2 char indentaion for yaml
 autocmd FileType yml,yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
+"For python files set indent foldmethod
+autocmd FileType python set foldmethod=indent foldlevel=99
+
 "Surround with double curly braces, for Jinja2 variables.
 "No spaces: Lowercase j + surround operator, e.g yswj
 "With spaces: Uppercase J + surround operator, e.g yswJ
